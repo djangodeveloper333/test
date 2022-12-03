@@ -1,0 +1,359 @@
+{% load static %}
+<html lang="zxx" xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>PKR FinCorp</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="loans HTML Template">
+	<meta name="keywords" content="loans, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Favicon -->
+	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+ 
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header-section">
+		<a href="#" class="site-logo">
+			<img src="{% static 'img/pkr.png' %}" width = "100px" height="50px">
+		</a>
+		<nav class="header-nav">
+			<ul class="main-menu">
+				<li><a href="#" class="active">Home</a></li>
+
+					<ul class="sub-menu">
+						<li><a href="#" class="active">About Us</a></li>
+					</ul>
+				{% if user.is_authenticated %}
+				<li><a href="credentials/logout">Logout</a></li>
+
+
+<!--				<li><a href="credentials/logout">Logout</a></li>-->
+				{% else %}
+
+				<li><a href="credentials/register">Register</a></li>
+				<li><a href="credentials/login">Login</a>
+				{% endif %}
+				<li><a href="#">Branches</a>
+					<ul class="sub-menu">
+						<li><a href="https://en.wikipedia.org/wiki/Bangalore">Bangalore</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Thiruvananthapuram">Trivandrum</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Chennai">Chennai</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Kochi">Kochi</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Kozhikode">Calicut</a></li>
+					</ul>
+				</li>
+				<li><font color="A8C3FE">Hello</font>  <font color="FF390F">&nbsp;<b>{{user.username}}</b></font></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="hs-text">
+						<h2>Welcome to PRK FinCorp Pvt.Ltd</h2>
+						<p>We, at PKR FinCorp, are committed to become the bank of choice by providing superior, proactive, innovative, state-of-art banking services with an attitude of care and concern for the customers and patrons.</p>
+						<a href="https:\\www.google.com" class="site-btn sb-dark">Find out more</a>
+					</div>
+				</div>
+<!--				<div class="col-lg-6">-->
+<!--					<form class="hero-form">-->
+<!--						<input type="text" placeholder="Your Name">-->
+<!--						<input type="text" placeholder="Your E-mail">-->
+<!--						<input type="text" placeholder="Your Phone">-->
+<!--						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>-->
+<!--						<button class="site-btn">Apply for a loan now!</button>-->
+<!--					</form>-->
+<!--				</div>-->
+			</div>
+		</div>
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/1.jpg' %}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/2.jpg' %}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/3.jpg' %}"></div>
+		</div>
+	</section>
+	<!-- Hero Section end -->
+
+	<!-- Why Section end -->
+	<section class="why-section spad">
+		<div class="container">
+			<div class="text-center mb-5 pb-4">
+				<h2>Why Choose us?</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-012-24-hours"></i>
+						</div>
+						<div class="ib-text">
+							<h5>Money in 1 Hour!</h5>
+							<p>Good money doesn’t always come easy, but there are legitimate ways to find fast cash. Want the money right away? Chances are you’ll need to part with something nice or provide a service. Other methods may take a little longer. </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-036-customer-service"></i>
+						</div>
+						<div class="ib-text">
+							<h5>Helpfull Staff</h5>
+							<p>Our Bank staff support you in different banking activities through a wide variety of administrative and customer service tasks..</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-039-info"></i>
+						</div>
+						<div class="ib-text">
+							<h5>Credit History Considered</h5>
+							<p>Your credit report includes information about the number and types of your credit accounts, how long each account has been open, amounts owed, amount of available credit used, whether bills were paid on time, and the number of recent credit inquiries and it will help you to maintain a good credit score.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-center pt-3">
+				<a href="{% url 'bank_app:apply' %}" class="site-btn sb-big">Apply For The Loan!</a>
+			</div>
+		</div>
+	</section>
+	<!-- Why Section end -->
+
+
+	<!-- CTA Section end -->
+<!--	<section class="cta-section set-bg" data-setbg="{% static 'img/cta-bg.jpg' %}">-->
+<!--		<div class="container">-->
+<!--			<h2>Already have a <strong>L2Go</strong> Bank Loan?</h2>-->
+<!--			<h5>If you're thinking about borrowing more, we're here to help.</h5>-->
+<!--			<a href="#" class="site-btn sb-dark sb-big">Find out More</a>-->
+<!--		</div>-->
+<!--	</section>-->
+	<!-- CTA Section end -->
+
+
+	<!-- Feature Section -->
+<!--	<div class="feature-section spad">-->
+<!--		<div class="container">-->
+<!--			<div class="feature-item">-->
+<!--				<div class="row">-->
+<!--					<div class="col-lg-6">-->
+<!--						<img src="{% static 'img/feature-1.jpg' %}" alt="">-->
+<!--					</div>-->
+<!--					<div class="col-lg-6">-->
+<!--						<div class="feature-text">-->
+<!--							<h2>Get a personal loan from just 8.5% APR</h2>-->
+<!--							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>-->
+<!--							<a href="#" class="readmore">Apply for a loan now <img src="{% static 'img/arrow.png' %}" alt=""></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="feature-item">-->
+<!--				<div class="row">-->
+<!--					<div class="col-lg-6 order-lg-2">-->
+<!--						<img src="{% static 'img/feature-2.jpg' %}" alt="">-->
+<!--					</div>-->
+<!--					<div class="col-lg-6 order-lg-1">-->
+<!--						<div class="feature-text">-->
+<!--							<h2>Get aproved in minutes after you apply online</h2>-->
+<!--							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>-->
+<!--							<a href="#" class="readmore">Apply for a loan now <img src="{% static 'img/arrow.png' %}" alt=""></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--&lt;!&ndash;	</section>&ndash;&gt;-->
+	<!-- Feature Section end -->
+
+
+	<!-- Help Section -->
+	<section class="help-section spad">
+		<div class="container">
+			<div class="text-center text-white mb-5 pb-4">
+				<h2>How a personal loan can help</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<p>Personal loans are borrowed money that can be used for large purchases, debt consolidation, emergency expenses and much more. These loans are paid back in monthly installments over the course of a few months or upwards of a few years..</p>
+				</div>
+				<div class="col-md-6">
+					<p> Most personal loans have fixed interest rates, which means that your payments will stay the same every month. Personal loans are also typically unsecured, meaning there’s no collateral behind the loan.
+						If you don’t qualify for an unsecured personal loan, you may have to use collateral to be approved,
+						like a savings account or certificate of deposit. You can also ask a friend or family member to co-sign on
+						your personal loan to help you get approved.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<ul class="help-list">
+						<li><a href="https://www.carwale.com/">Buying a car</a></li>
+						<li><a href="{% url 'bank_app:ctrl' %}" target="_app">Take control of your finances</a></li>
+						<li><a href="https://www.eduqfix.com/PayDirect/#/student">Pay school tuitions</a></li>
+						<li><a href="https://www.croma.com/home-appliances/c/5">Adding value to your home</a><li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<ul class="help-list">
+						<li><a href="https://www.ramseysolutions.com/budgeting/how-to-improve-your-budget">Increese your budget</a></li>
+						<li><a href="https://www.spin.com/2010/12/why-theyre-called-day-remember/">Have a day to remember</a></li>
+						<li><a href="https://healthid.ndhm.gov.in/">Get a health-card</a></li>
+						<li><a href="https://traveltriangle.com/"> Go on a holiday</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<ul class="help-list">https://www.acko.com/
+						<li><a href="https://www.acko.com/">Get an Insurance</a></li>
+						<li><a href="https://www.makemytrip.com/">Take a trip</a></li>
+						<li><a href="https://www.decathlon.in/">Help your kids</a></li>
+						<li><a href="https://www.homelane.com/">Renovate your home</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Help Section end -->
+
+
+	<!-- Info Section -->
+<!--	<section class="info-section spad">-->
+<!--		<div class="container">-->
+<!--			<div class="row">-->
+<!--				<div class="col-lg-5">-->
+<!--					<img src="{% static 'img/info-img.jpg' %}" alt="">-->
+<!--				</div>-->
+<!--				<div class="col-lg-7">-->
+<!--					<div class="info-text">-->
+<!--						<h2>We’re here to help</h2>-->
+<!--						<h5>Monday to Thursday (8am to 8pm), and Friday (8am to 5pm).</h5>-->
+<!--						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>-->
+<!--						<ul>-->
+<!--							<li>+34 56873 2246</li>-->
+<!--							<li>contact@loans2go.com</li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
+	<!-- Info Section end -->
+
+	<!-- Score Section end -->
+<!--	<section class="score-section text-white set-bg" data-setbg="{% static 'img/score-bg.jpg' %}">-->
+<!--		<div class="container">-->
+<!--			<div class="row">-->
+<!--				<div class="col-xl-6 col-lg-8">-->
+<!--					<h2>Calculate my Score</h2>-->
+<!--					<h4>Check your credit reports as often as you want, it won't affect your scores.</h4>-->
+<!--					<a href="#" class="site-btn sb-big">show my score</a>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<img src="{% static 'img/hand.png' %}" alt="" class="hand-img">-->
+<!--		</div>-->
+<!--	</section>-->
+	<!-- Score Section end -->
+
+	<!-- Footer Section -->
+<!--	<footer class="footer-section">-->
+<!--		<div class="container">-->
+<!--			<a href="#" class="footer-logo">-->
+<!--				<img src="{% static 'img/logo.png' %}" alt="">-->
+<!--			</a>-->
+<!--			<div class="row">-->
+<!--				<div class="col-lg-3 col-sm-6">-->
+<!--					<div class="footer-widget">-->
+<!--						<h2>What we do</h2>-->
+<!--						<ul>-->
+<!--							<li><a href="#">Loans</a></li>-->
+<!--							<li><a href="#">Car loans</a></li>-->
+<!--							<li><a href="#">Debt consolidation loans</a></li>-->
+<!--							<li><a href="#">Home improvement loans</a></li>-->
+<!--							<li><a href="#"> Wedding loans</a></li>-->
+<!--							<li><a href="#">Innovative Finance ISA</a></li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-lg-3 col-sm-6">-->
+<!--					<div class="footer-widget">-->
+<!--						<h2>About us</h2>-->
+<!--						<ul>-->
+<!--							<li><a href="#">About us</a></li>-->
+<!--							<li><a href="#">Our story</a></li>-->
+<!--							<li><a href="#">Meet the board</a></li>-->
+<!--							<li><a href="#">Meet the leadership team</a></li>-->
+<!--							<li><a href="#">Awards</a></li>-->
+<!--							<li><a href="#">Careers</a></li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-lg-3 col-sm-6">-->
+<!--					<div class="footer-widget">-->
+<!--						<h2>Legal</h2>-->
+<!--						<ul>-->
+<!--							<li><a href="#">Privacy policy</a></li>-->
+<!--							<li><a href="#">Loans2go principles</a></li>-->
+<!--							<li><a href="#">Website terms</a></li>-->
+<!--							<li><a href="#">Cookie policy</a></li>-->
+<!--							<li><a href="#">Conflicts policy</a></li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-lg-3 col-sm-6">-->
+<!--					<div class="footer-widget">-->
+<!--						<h2>Site Info</h2>-->
+<!--						<ul>-->
+<!--							<li><a href="#">Support</a></li>-->
+<!--							<li><a href="#">FAQ</a></li>-->
+<!--							<li><a href="#">Sitemap</a></li>-->
+<!--							<li><a href="#">Careers</a></li>-->
+<!--							<li><a href="#">Contact us</a></li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<center>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a href="https://www.instagram.com/karthikpnair"><b>Karthik</b></a> for AbaKus technologies</center>
+		   </div>
+<!--	</footer>-->
+	<!-- Footer Section end -->
+	
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
